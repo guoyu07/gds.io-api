@@ -1,0 +1,5 @@
+.npmrc
+.idea/
+node_modules/
+_docs/
+npm-debug.log

@@ -1,0 +1,29 @@
+{
+  "name": "gds.io-api",
+  "version": "0.0.2",
+  "description": "gds.io api static page",
+  "main": "Makefile",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs": "markdown-folder-to-html",
+    "deploy": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qweeto/gds.io-api.git"
+  },
+  "author": [
+    "Denis Baskovsky"
+  ],
+  "license": "MPL",
+  "bugs": {
+    "url": "https://github.com/Qweeto/gds.io-api/issues"
+  },
+  "homepage": "https://qweeto.github.io/gds.io-api/",
+  "dependencies": {
+    "gh-pages": "^0.12.0",
+    "markdown-folder-to-html": "https://github.com/qertis/markdown-folder-to-html/tarball/master"
+  }
+}
