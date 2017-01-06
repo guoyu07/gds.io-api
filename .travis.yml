@@ -6,10 +6,6 @@ node_js:
 notifications:
   email: false
 
-cache:
-  directories:
-    - node_modules
-
 script: make
 
 after_success:
