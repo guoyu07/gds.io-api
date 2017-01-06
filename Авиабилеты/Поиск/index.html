@@ -1,57 +1,55 @@
 <!doctype html>
 <html>
 <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
     <meta base="https://qweeto.github.io/gds.io-api/">
     <style>
-
         h1, h2, h3, h4, h5, h6 {
             text-rendering: optimizeLegibility;
             line-height: 1;
             margin-top: 0;
             color: #222;
         }
-
         blockquote + figcaption cite {
             display: block;
             font-size: inherit;
             text-align: right;
         }
-
         body {
-            word-wrap: break-word;
-        }
-
-        pre code {
-            word-wrap: normal;
-        }
-
-        body {
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
             hyphens: auto;
             color: #444;
+						word-wrap: break-word;
+						font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         }
-
-        h1 { font-size: 2em;    /* 2*16 = 32 */       }
-        h2 { font-size: 1.5em;  /* 1.5*16 = 24 */     }
-        h3 { font-size: 1.17em; /* 1.17*16 = 18.72 */ }
-        h4 { font-size: 1em;    /* 1*16 = 16 */       }
-        h5 { font-size: 0.83em; /* 0.83*16 = 13.28 */ }
-        h6 { font-size: 0.75em; /* 0.75*16 = 12 */    }
-
-        h1 { margin: 2.42424rem 0 1.454544rem; }
-        h2 { margin: 2.0202rem 0 1.21212rem;  }
-        h3 { margin: 1.61616rem 0 1rem; }
-        h4 { margin: 1.21212rem 0 1; }
-        h5 { margin: 0.80808rem 0; }
-        h6 { margin: 0.70707rem 0; }
-
+        h1 {
+					font-size: 2em;    /* 2*16 = 32 */
+					margin: 2.42424rem 0 1.454544rem;
+				}
+        h2 {
+					font-size: 1.5em;  /* 1.5*16 = 24 */
+					margin: 2.0202rem 0 1.21212rem;
+				}
+        h3 {
+					font-size: 1.17em; /* 1.17*16 = 18.72 */
+					margin: 1.61616rem 0 1rem;
+				}
+        h4 {
+					font-size: 1em;    /* 1*16 = 16 */
+					margin: 1.21212rem 0 1rem;
+				}
+        h5 {
+					font-size: 0.83em; /* 0.83*16 = 13.28 */
+					margin: 0.80808rem 0;
+				}
+        h6 {
+					font-size: 0.75em; /* 0.75*16 = 12 */
+					margin: 0.70707rem 0;
+				}
         p { margin: auto auto 1.5rem; }
-
         small {
             font-size: 65%;
         }
-
         input,
         abbr,
         acronym,
@@ -65,82 +63,54 @@
             -ms-hyphens: none;
             hyphens: none;
         }
-
-        pre {
-            white-space: pre;
-        }
-
-        pre code {
-            white-space: -moz-pre-wrap;
-            white-space: pre-wrap;
-        }
-
-        code {
-            white-space: pre;
-            font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
-        }
-
         abbr {
-            -webkit-font-variant: small-caps;
-            -moz-font-variant: small-caps;
-            -ms-font-variant: small-caps;
             font-variant: small-caps;
             font-weight: 600;
             text-transform: lowercase;
             color: gray;
         }
-
         abbr[title]:hover {
             cursor: help;
         }
-
-        /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            color: #444;
-        }
-
         img {
             max-width: 100%;
             height: auto;
             display: block;
             margin: auto;
         }
-
         code, pre {
             background-color: #f5f5f5;
             color: #444;
             border-radius: 2px;
-            text-shadow: 0px 1px 0px white;
+            text-shadow: 0 1px 0 white;
             box-shadow: 0 1px 1px rgba(0,0,0,0.15);
         }
-        pre code {
+		    pre code {
             border: none;
             box-shadow: none;
+						white-space: pre-wrap;
+						word-wrap: normal;
         }
         pre {
+						white-space: pre;
             padding: 0.5em;
         }
         code {
-            display: inline-block;
+						white-space: pre;
+						font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+						display: inline-block;
             padding: 0 0.5em;
             line-height: 1.4;
             font-size: 0.9em;
         }
-
         /*
         Add transition to containers so they can push in and out.
          */
         #layout,
         #menu,
         .menu-link {
-            -webkit-transition: all 0.2s ease-out;
-            -moz-transition: all 0.2s ease-out;
-            -ms-transition: all 0.2s ease-out;
-            -o-transition: all 0.2s ease-out;
             transition: all 0.2s ease-out;
         }
-
         /*
         This is the parent `<div>` that contains the menu and the content area.
          */
@@ -155,7 +125,6 @@
         #layout.active .menu-link {
             left: 250px;
         }
-
         /*
         The content `<div>` is where all your content goes.
          */
@@ -165,7 +134,6 @@
             max-width: 80ex;
             line-height: 1.6em;
         }
-
         /*
         The `#menu` `<div>` is the parent `<div>` that contains the menu that
         appears on the left side of the page.
@@ -183,7 +151,6 @@
             -webkit-overflow-scrolling: touch;
             font-size: 0.9em;
         }
-
         /*
         All anchors inside the menu should be styled like this.
          */
@@ -196,7 +163,6 @@
         #menu a:first-letter {
             text-transform: capitalize;
         }
-
         #menu ul {
             list-style-type: none;
             padding: 0;
@@ -207,7 +173,6 @@
             margin-left: 0.5em;
             border-left: 4px solid rgba(255,255,255,0.5);
         }
-
         /*
         Change color of the anchor links on hover/focus.
          */
@@ -215,21 +180,18 @@
         #menu li a:focus {
             background: rgba(255,255,255,0.4);
         }
-
         /*
         This styles the selected menu item `<li>`.
          */
         #menu li a.active {
             background: rgba(0,0,0,0.05);
         }
-
         /*
         This styles a link within a selected menu item `<li>`.
          */
         #menu li a.active {
             color: #222;
         }
-
         /*
         This styles the menu heading.
          */
@@ -239,7 +201,6 @@
             color: #000;
             margin: 1em 0.5em 0;
         }
-
         /* -- Dynamic Button For Responsive Menu -------------------------------------*/
         /*
         `.menu-link` represents the responsive menu toggle that shows/hides on
@@ -257,16 +218,13 @@
             height: auto;
             padding: 1.6em 1.2em;
         }
-
         .menu-link:hover {
             background: /*#f4f4f4 * 0.8*/#eee;
         }
-
         .menu-link span {
             position: relative;
             display: block;
         }
-
         .menu-link span,
         .menu-link span:before,
         .menu-link span:after {
@@ -274,29 +232,24 @@
             width: 100%;
             height: 0.2em;
         }
-
         .menu-link span:before,
         .menu-link span:after {
             position: absolute;
             margin-top: -0.6em;
             content: " ";
         }
-
         .menu-link span:after {
             margin-top: 0.6em;
         }
-
         /*
         Hides the menu at `48em`, but modify this based on your app's needs.
          */
         @media (min-width: 48em) {
-
             .header,
             .content {
                 padding-left: 2em;
                 padding-right: 2em;
             }
-
             #layout {
                 padding-left: 250px; /* left col width "#menu" */
                 left: 0;
@@ -304,18 +257,15 @@
             #menu {
                 left: 250px;
             }
-
             .menu-link {
                 position: fixed;
                 left: 250px;
                 display: none;
             }
-
             #layout.active .menu-link {
                 left: 250px;
             }
         }
-
         @media (max-width: 48em) {
             /* Only apply this when the window is small. Otherwise, the following
             case results in extra padding on the left:
@@ -328,10 +278,7 @@
                 left: 250px;
             }
         }
-
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
 </head>
 <body>
 <div id="layout">
@@ -345,15 +292,15 @@
 <li><a class="" href="../../home.html">home</a></li>
 <li class="heading">Авиабилеты</li>
 <ul>
-<li class="heading">Бронирование</li>
+<li class="heading"><a class="" href="../Бронирование/index.html">Бронирование</a></li>
 <ul>
-<li><a class="" href="../Бронирование/index.html">index</a></li>
+
 </ul>
-<li class="heading">Поиск</li>
+<li class="heading"><a class="" href="index.html">Поиск</a></li>
 <ul>
 <li><a class="" href="fly.search.get.html">fly.search.get</a></li>
 <li><a class="" href="fly.search.html">fly.search</a></li>
-<li><a class="active" href="index.html">index</a></li>
+
 </ul>
 </ul>
 </ul>
