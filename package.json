@@ -1,7 +1,7 @@
 {
   "name": "gds.io-api",
   "version": "0.0.2",
-  "description": "gds.io api static page",
+  "description": "gds.io API Static Page",
   "main": "Makefile",
   "directories": {
     "doc": "docs"
@@ -14,8 +14,10 @@
     "type": "git",
     "url": "git+https://github.com/Qweeto/gds.io-api.git"
   },
-  "author": [
-    "Denis Baskovsky"
+  "author": "Denis Baskovsky",
+  "keywords": [
+    "gds",
+    "gds.io"
   ],
   "license": "MPL",
   "bugs": {
